@@ -1,13 +1,19 @@
-#!/bin/zsh -e
+#!/bin/zsh -eux
 
 mydir=${0:a:h}
 cd $mydir/.
+
+# regen sitemap
+wget -qO sitemap.xml https://traceypooh.github.io/poohtini/sitemap.xml
+perl -i -pe 's=</urlset>=\n  <url>\n    <loc>http://traceypooh.github.com/</loc>\n  </url>\n</urlset>=' \
+  sitemap.xml
+
 
 wget -qO- 'https://api.github.com/users/traceypooh/repos?per_page=1000'| jq -r '.[] |select(.has_pages) | [.name, .description] | @tsv' |sort |fgrep -v traceypooh.github.com |tee repos.tsv
 
 (
   echo "
-<link href='https://esm.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link href='https://esm.ext.archive.org/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'>
 <style>
   body { margin: 50px }
   a { text-decoration:none }
