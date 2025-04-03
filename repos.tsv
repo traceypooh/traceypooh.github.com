@@ -1,12 +1,19 @@
+aos	archive OS
 blogtini	Markdown + JS 100% client-side blogs & websites
 deno_std	Deno standard library
 dwebtini	
+eveal.js	simplified version of reveal.js -- no need for docker or server, with tasteful defaults
 library-leaders	
 mozfest17	TV Archives cracked open - "AI for IA" Artificial Intelligence for Internet Archive.  Talk at MozFest, London Oct 2017.  VIEW SLIDES: https://traceypooh.github.io/mozfest17
 mp4cut.js	JS/clientside based clipping of an .mp4 file - rewrites header and only (losslessly) sends desired A/V packets for the start/end range
 multi-line-chart	D3-based multi-line chart demo
+poohbot	https://poohbot.com & https://traceypooh.com static site
+poohtini	blogtini.com version of poohbot.com (my personal website)
 slides	slides and decks from talks and gatherings
 test1	
 test2	
 testy	
+textAV	archive.org TV and captions slides for NYU textAV 
 tvgathering	
+wasm	wasm compiled docker images in a browser
+word-salad	https://word-salad.archive.org/ word puzzle game very similar to NY Times Spelling Bee 🐝 https://www.nytimes.com/puzzles/spelling-bee but all hand-made...
